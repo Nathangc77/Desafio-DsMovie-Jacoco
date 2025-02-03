@@ -68,6 +68,8 @@ public class ScoreServiceTests {
 	
 	@Test
 	public void saveScoreShouldReturnMovieDTO() {
+		movie.getScores().add(ScoreFactory.createScoreEntity());
+
 		MovieDTO result = service.saveScore(scoreDTO);
 
 		Assertions.assertNotNull(result);
